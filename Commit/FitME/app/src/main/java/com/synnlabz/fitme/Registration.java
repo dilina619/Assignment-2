@@ -2,7 +2,6 @@ package com.synnlabz.fitme;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -39,14 +38,13 @@ public class Registration extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText)findViewById(R.id.password);
 
-
         mAuth = FirebaseAuth.getInstance();
         firebaseAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user !=null){
-                    Intent intent = new Intent(Registration.this, MainActivity.class);
+                    Intent intent = new Intent(Registration.this, SetValue.class);
                     startActivity(intent);
                     //finish();  window leaked error fixed
                     return;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorPrimary"
+    tools:context=".ShowBMI">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:text="Normal"
+        android:textSize="35dp"/>
+
+    <ImageView
+        android:id="@+id/result"
+        android:layout_above="@id/bmilay"
+        android:layout_below="@id/output"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/normal"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/bmilay"
+        android:layout_above="@id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:text="Your BMI is"/>
+
+        <TextView
+            android:id="@+id/bmiresults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:text="26.5"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/medium"
+        android:background="@drawable/btn_login"
+        android:text="Let's Continue"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
