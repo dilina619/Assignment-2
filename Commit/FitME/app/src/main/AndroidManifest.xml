@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowBMI"></activity>
+        <activity android:name=".MyWorkout"></activity>
+        <activity android:name=".HealthTips" />
+        <activity android:name=".Profile" />
+        <activity android:name=".ShowBMI" />
         <activity android:name=".SetValue" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".Registration" />
