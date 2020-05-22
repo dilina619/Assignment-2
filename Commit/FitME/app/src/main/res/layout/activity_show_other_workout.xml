@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".myworkout.MyWorkout">
+    tools:context=".ShowOtherWorkout">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -34,7 +34,7 @@
             android:layout_gravity="start"
             android:gravity="center"
             android:textColor="@color/white"
-            android:text="My Workout"
+            android:text="Other Workout"
             android:layout_weight="7"
             android:textSize="30dp" />
 

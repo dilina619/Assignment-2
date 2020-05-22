@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".myworkout.MyWorkout">
+    tools:context=".mymealplan.MyMealPlan">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -34,16 +34,15 @@
             android:layout_gravity="start"
             android:gravity="center"
             android:textColor="@color/white"
-            android:text="My Workout"
+            android:text="My Meal Plan"
             android:layout_weight="7"
-            android:textSize="30dp" />
+            android:textSize="28dp" />
 
 
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
         android:layout_below="@id/toolbar"
-        android:layout_above="@id/bottombar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -54,43 +53,8 @@
             android:scrollbars="vertical">
         </androidx.recyclerview.widget.RecyclerView>
 
+
     </androidx.core.widget.NestedScrollView>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/bottombar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentBottom="true">
-
-        <TextView
-            android:layout_below="@id/toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/medium"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="Start Workout"
-            android:layout_weight="7"
-            android:textSize="20dp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <ImageButton
-        android:layout_alignParentBottom="true"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:onClick="backToHome"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="25dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/btn_round"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/white"
-        android:src="@drawable/ic_play"/>
 
 
 </RelativeLayout>
