@@ -36,7 +36,7 @@
             android:textColor="@color/white"
             android:text="My Workout"
             android:layout_weight="7"
-            android:textSize="30dp" />
+            android:textSize="25dp" />
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -64,14 +64,15 @@
         android:layout_alignParentBottom="true">
 
         <TextView
+            android:id="@+id/clock"
             android:layout_below="@id/toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/medium"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_gravity="start"
+            android:gravity="start"
             android:textColor="@color/white"
             android:text="Start Workout"
             android:layout_weight="7"
@@ -79,18 +80,61 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageButton
-        android:layout_alignParentBottom="true"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:onClick="backToHome"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="25dp"
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:background="@drawable/btn_round"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/white"
-        android:src="@drawable/ic_play"/>
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnstop"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="backToHome"
+            android:layout_toLeftOf="@id/btnplay"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_round"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_stop"/>
+
+        <ImageButton
+            android:id="@+id/btnplay"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="backToHome"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_round"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_play"/>
+
+        <ImageButton
+            android:id="@+id/btnpause"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="backToHome"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_round"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_pause"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

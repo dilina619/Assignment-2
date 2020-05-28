@@ -1,6 +1,11 @@
 package com.synnlabz.fitme.healthtips;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +29,22 @@ public class HealthTips extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_tips);
+
+        ConnectivityManager connMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            // fetch data
+        } else {
+            new AlertDialog.Builder(this)
+                    .setTitle("Connection Failure")
+                    .setMessage("Please Connect to the Internet")
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
 
         mYouTubePlayerView1 = (YouTubePlayerView)findViewById(R.id.youtubeplayer1);
         mYouTubePlayerView2 = (YouTubePlayerView)findViewById(R.id.youtubeplayer2);

@@ -22,9 +22,10 @@ import java.util.Map;
 
 public class ShowBMI extends AppCompatActivity {
 
-    private String Age , Height , Weight;
-    private int Gender , Categ;
-    private Float age,height,weight;
+    private String Age , Height , Weight, noimage;
+    private int Gender , Categ , age;
+    private Float height,weight;
+    private double BMR , TDEE;
 
     private Button mContinue;
     private TextView Results , Output;
@@ -70,10 +71,21 @@ public class ShowBMI extends AppCompatActivity {
 
         weight = Float.parseFloat(Weight);
         height = Float.parseFloat(Height);
+        age = Integer.parseInt(Age);
+
+        if (Gender==1){
+            BMR = 10*weight+6.25*height-5*age+5;
+            TDEE = BMR*1.375;
+        }else if(Gender==2){
+            BMR = 10*weight+6.25*height-5*age-161;
+            TDEE = BMR*1.375;
+        }
 
         float bmi = (100*100*weight)/(height*height);
         final double result = Math.round(bmi * 100.0) / 100.0;
         Results.setText(String.valueOf(result));
+
+        noimage = "null";
 
         checkBMI(result);
 
@@ -88,7 +100,9 @@ public class ShowBMI extends AppCompatActivity {
                 userInfo.put("height", Height);
                 userInfo.put("weight", Weight);
                 userInfo.put("category",Categ);
+                userInfo.put("tdee",TDEE);
                 userInfo.put("bmi", result);
+                userInfo.put("profileImageUrl",noimage);
                 currentUserDb.updateChildren(userInfo);
                 Intent intent = new Intent(ShowBMI.this, MainActivity.class);
                 startActivity(intent);

@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowOtherWorkout"></activity>
-        <activity android:name=".OtherWorkouts" />
+        <activity android:name=".otherworkouts.ShowOtherWorkout"></activity>
+        <activity android:name=".otherworkouts.OtherWorkouts" />
         <activity android:name=".mymealplan.MyMealPlan" />
         <activity android:name=".myworkout.MyWorkout" />
         <activity android:name=".healthtips.HealthTips" />

@@ -44,6 +44,7 @@
                         android:onClick="viewProfile"/>
 
                     <TextView
+                        android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/medium"
@@ -93,10 +94,12 @@
                         android:layout_weight="3">
 
                         <TextView
+                            android:id="@+id/step"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/medium"
                             android:layout_gravity="center"
+                            android:maxLength="5"
                             android:gravity="center"
                             android:textColor="@color/colorAccent"
                             android:text="1600"
@@ -125,8 +128,10 @@
                         android:layout_weight="3">
 
                         <TextView
+                            android:id="@+id/tdee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:maxLength="4"
                             android:fontFamily="@font/medium"
                             android:layout_gravity="center"
                             android:gravity="center"
@@ -157,10 +162,12 @@
                         android:layout_weight="3">
 
                         <TextView
+                            android:id="@+id/weight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/medium"
                             android:layout_gravity="center"
+                            android:maxLength="4"
                             android:gravity="center"
                             android:textColor="@color/colorAccent"
                             android:text="75.6"

@@ -36,7 +36,7 @@
             android:textColor="@color/white"
             android:text="My Meal Plan"
             android:layout_weight="7"
-            android:textSize="28dp" />
+            android:textSize="25dp" />
 
 
     </androidx.appcompat.widget.Toolbar>

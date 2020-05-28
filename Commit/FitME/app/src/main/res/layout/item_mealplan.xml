@@ -23,7 +23,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/maplocation"/>
+                android:src="@drawable/mealplan41"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,19 +45,6 @@
                         android:layout_weight="7"
                         android:textSize="20dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/medium"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_gravity="center"
-                        android:gravity="end"
-                        android:textColor="@color/white"
-                        android:text="22:40"
-                        android:layout_weight="7"
-                        android:textSize="13dp" />
-
 
             </LinearLayout>
 
@@ -69,6 +56,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/medium"
                 android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="8dp"
                 android:textSize="13dp"/>
 
