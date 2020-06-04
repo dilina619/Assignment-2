@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.synnlabz.fitme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDygKnWTQxWSabZiHzC-Fa0RJoBSYqtLcw"/>
+
+        <activity android:name=".otherworkouts.ShowOtherWorkout"></activity>
+        <activity android:name=".otherworkouts.OtherWorkouts" />
+        <activity android:name=".mymealplan.MyMealPlan" />
+        <activity android:name=".myworkout.MyWorkout" />
+        <activity android:name=".healthtips.HealthTips" />
+        <activity android:name=".Profile" />
+        <activity android:name=".bmi.ShowBMI" />
+        <activity android:name=".bmi.SetValue" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".Registration" />
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
